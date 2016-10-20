@@ -1,11 +1,11 @@
-from __future__ import division
+
 import autograd.numpy as np
 import autograd.numpy.random as npr
 from autograd.util import make_tuple
 from toolz import curry
 from collections import defaultdict
 
-from util import compose, sigmoid, relu, identity, log1pexp, isarray
+from .util import compose, sigmoid, relu, identity, log1pexp, isarray
 
 
 ### util
@@ -55,7 +55,7 @@ def _mlp(nonlinearities, params, inputs):
     eval_mlp = compose(layer(nonlin, W, b)
                        for nonlin, (W, b) in zip(nonlinearities, params))
     out = eval_mlp(ravel(inputs))
-    return unravel(out) if isarray(out) else map(unravel, out)
+    return unravel(out) if isarray(out) else list(map(unravel, out))
 
 def init_mlp(d_in, layer_specs, **kwargs):
     dims = [d_in] + [l[0] for l in layer_specs]

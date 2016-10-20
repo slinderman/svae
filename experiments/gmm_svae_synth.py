@@ -1,4 +1,4 @@
-from __future__ import division, print_function
+
 import matplotlib.pyplot as plt
 import autograd.numpy as np
 import autograd.numpy.random as npr

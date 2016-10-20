@@ -1,4 +1,4 @@
-from __future__ import division
+
 import autograd.numpy as np
 from numpy.random.mtrand import _rand as rng
 

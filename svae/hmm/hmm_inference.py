@@ -1,4 +1,4 @@
-from __future__ import division
+
 import autograd.numpy as np
 from autograd import grad
 from autograd import value_and_grad as vgrad
@@ -20,7 +20,7 @@ hmm_logZ.defgrad(make_grad_hmm_logZ)
 
 def hmm_estep(natparam):
     C = lambda x: np.require(x, np.double, 'C')
-    init_params, pair_params, node_params = map(C, natparam)
+    init_params, pair_params, node_params = list(map(C, natparam))
 
     # compute messages
     alphal = messages_forwards_log(

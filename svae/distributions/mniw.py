@@ -1,4 +1,4 @@
-from __future__ import division
+
 import autograd.numpy as np
 import autograd.numpy.random as npr
 from autograd.scipy.special import multigammaln, digamma

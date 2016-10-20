@@ -1,4 +1,4 @@
-
+from __future__ import division
 
 from ..util import contract, sub
 import niw, mniw

@@ -1,3 +1,4 @@
+from __future__ import division, print_function
 
 from toolz import curry
 from autograd import value_and_grad as vgrad

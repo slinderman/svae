@@ -1,3 +1,4 @@
+from __future__ import division
 
 import autograd.numpy as np
 from autograd.scipy.misc import logsumexp
